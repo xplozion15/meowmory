@@ -94,6 +94,7 @@
   }
 
   .game-rule {
+    font-weight: 600;
     font-size: 0.7rem;
   }
   .gameover-dialog {
@@ -106,7 +107,7 @@
   align-items: center;
   justify-content: space-between;
   width: 55%;
-  height: 15%;
+  height: 16%;
   border: 2px solid black;
   top: 50%;
   left: 50%;
