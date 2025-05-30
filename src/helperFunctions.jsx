@@ -1,6 +1,6 @@
 function shuffleArray(array) {
   let currentIndex = array.length;
-  
+
   // While there remain elements to shuffle...
   while (currentIndex != 0) {
 
@@ -13,3 +13,5 @@ function shuffleArray(array) {
       array[randomIndex], array[currentIndex]];
   }
 }
+
+export {shuffleArray};

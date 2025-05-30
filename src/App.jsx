@@ -3,7 +3,7 @@ import "./App.css";
 import { Game } from "./components/game.jsx";
 
 function App() {
-
+  
   const [catList,setCatList] = useState([]);
 
   useEffect(() => {
