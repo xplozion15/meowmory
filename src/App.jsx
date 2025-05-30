@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-      <h2 className="game-heading">MOEWMORY</h2>
+      <h2 className="game-heading">MEOWMORY</h2>
       <p className="game-rule">
         Dont click the same cat twice or else game over!
       </p>

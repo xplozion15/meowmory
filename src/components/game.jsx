@@ -30,17 +30,24 @@ function Game({ catList }) {
               <div
                 className="cat-card"
                 onClick={() => {
-                  //sound effect
+
+                  if(!isGameOver) {
+                      //sound effect
                   const clickSound = new Audio("/public/sound/clicksound.wav");
                   clickSound.play();
 
                   // checking if same card is clicked twice
                   if (clickedCardIds.includes(cat.id)) {
-                    newGame(); 
+                    newGame();
                     return;
                   }
 
+
                   setScore(score + 1); //increment score by 1
+
+                  if (score === 9) {
+                    setIsGameOver(true)
+                  }
 
                   // setting new state with updated clicked cat card ids
                   const copyOfClickedCardIds = structuredClone(clickedCardIds);
@@ -51,6 +58,8 @@ function Game({ catList }) {
                     //increment highscore by 1 if its new high score
                     setHighScore(highScore + 1);
                   }
+                  }
+                  
                 }}
               >
                 <img src={cat.url} alt="cat" className="cat-image" />
@@ -61,10 +70,16 @@ function Game({ catList }) {
       </div>
 
       {isGameOver && <dialog className="gameover-dialog">
-        <p className="gameover-paragraph">
+        {score < 9 ? <p className="gameover-paragraph">
           Meeeow... You dared to click me twice? That’s a purr-sonal offense!
-        </p>
-        <button className="new-game">Again, Hooman?</button>
+        </p> : <p className="gameover-paragraph">
+          Me-wow! You’re sharper than my claws. Victory is yours… until next time.
+        </p>}
+        <button className="new-game" onClick={() => {
+          setIsGameOver(false);
+          setScore(0);
+          setClickedCardIds([]);
+        }}>Again, Hooman?</button>
       </dialog>}
     </>
   );
