@@ -26,7 +26,8 @@
   margin: 5rem;
   gap: 4rem;
   padding: 1rem;
-  grid-template-columns: 220px 220px 220px 220px 220px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   grid-template-rows: 180px 180px;
 }
 
@@ -88,15 +89,16 @@
     display: grid;
     gap: 2rem;
     padding: 1rem;
+    margin: 1rem;
     grid-template-columns: 150px 150px;
     grid-template-rows: 100px 100px 100px 100px 100px;
   }
 
   .game-rule {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .gameover-dialog {
-  font-size: 0.6em;
+  font-size: 0.8em;
   position: fixed;
   background-color: darkblue;
   color: white;
@@ -105,14 +107,13 @@
   align-items: center;
   justify-content: space-between;
   width: 55%;
-  height: 11%;
+  height: 15%;
   border: 2px solid black;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 10px 500vw rgba(0, 0, 0, 0.6);
 }
-
 
 .new-game {
   width: 50%;
@@ -121,6 +122,4 @@
   background-color: #3d5786;
   color: white;
 }
-
-
 }
