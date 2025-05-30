@@ -1,15 +1,28 @@
+@font-face {
+  font-family: "Coffee-extra";
+  src: url("./public/font/Coffee-extra.otf");
+}
+
 * {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);  
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background: #6190e8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #a7bfe8,
+    #6190e8
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #a7bfe8,
+    #6190e8
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   display: flex;
   flex-direction: row;
   justify-content: center;

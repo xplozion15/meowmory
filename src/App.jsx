@@ -3,13 +3,13 @@ import "./App.css";
 import { Game } from "./components/game.jsx";
 
 function App() {
-  
-  const [catList,setCatList] = useState([]);
+  const [catList, setCatList] = useState([]);
 
   useEffect(() => {
     const headers = new Headers({
       "Content-Type": "application/json",
-      "x-api-key": "live_6wIELAI7Nn4QAnPgz3cLgS1oKbYJ4cnQvRbz21t4eVKnXQrNfUIg7AJQEEfIHg5x",
+      "x-api-key":
+        "live_6wIELAI7Nn4QAnPgz3cLgS1oKbYJ4cnQvRbz21t4eVKnXQrNfUIg7AJQEEfIHg5x",
     });
     let requestOptions = {
       method: "GET",
@@ -17,14 +17,11 @@ function App() {
       redirect: "follow",
     };
 
-    fetch(
-      "https://api.thecatapi.com/v1/images/search?limit=10",
-      requestOptions,
-    )
+    fetch("https://api.thecatapi.com/v1/images/search?limit=10", requestOptions)
       .then((response) => {
         return response.json();
       })
-      .then((result)=>{
+      .then((result) => {
         console.log(result);
         setCatList(result);
       })
@@ -37,7 +34,7 @@ function App() {
       <p className="game-rule">
         Dont click the same cat twice or else game over!
       </p>
-      <Game catList={catList}/>
+      <Game catList={catList} />
     </>
   );
 }
