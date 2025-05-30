@@ -33,7 +33,7 @@ function Game({ catList }) {
 
                   if (!isGameOver) {
                     //sound effect
-                    const clickSound = new Audio("/public/sound/clicksound.wav");
+                    const clickSound = new Audio("/sound/clicksound.wav");
                     clickSound.play();
 
                     // checking if same card is clicked twice
