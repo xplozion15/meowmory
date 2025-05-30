@@ -3,7 +3,8 @@
   font-size: 2rem;
 }
 
-.game-heading, .game-rule {
+.game-heading,
+.game-rule {
   text-align: center;
   padding: 1rem;
 }
@@ -14,6 +15,4 @@
   justify-content: space-evenly;
   gap: 2rem;
   margin: 1rem;
-
-  
 }
