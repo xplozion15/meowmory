@@ -79,7 +79,7 @@ function Game({ catList }) {
           setIsGameOver(false);
           setScore(0);
           setClickedCardIds([]);
-          const clickSound = new Audio("/public/sound/clicksound.wav");
+          const clickSound = new Audio("/sound/clicksound.wav");
           clickSound.play();
         }}>Again, Hooman?</button>
       </dialog>}
