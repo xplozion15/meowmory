@@ -31,35 +31,35 @@ function Game({ catList }) {
                 className="cat-card"
                 onClick={() => {
 
-                  if(!isGameOver) {
-                      //sound effect
-                  const clickSound = new Audio("/public/sound/clicksound.wav");
-                  clickSound.play();
+                  if (!isGameOver) {
+                    //sound effect
+                    const clickSound = new Audio("/public/sound/clicksound.wav");
+                    clickSound.play();
 
-                  // checking if same card is clicked twice
-                  if (clickedCardIds.includes(cat.id)) {
-                    newGame();
-                    return;
+                    // checking if same card is clicked twice
+                    if (clickedCardIds.includes(cat.id)) {
+                      newGame();
+                      return;
+                    }
+
+
+                    setScore(score + 1); //increment score by 1
+
+                    if (score === 9) {
+                      setIsGameOver(true)
+                    }
+
+                    // setting new state with updated clicked cat card ids
+                    const copyOfClickedCardIds = structuredClone(clickedCardIds);
+                    copyOfClickedCardIds.push(cat.id);
+                    setClickedCardIds(copyOfClickedCardIds);
+
+                    if (score >= highScore) {
+                      //increment highscore by 1 if its new high score
+                      setHighScore(highScore + 1);
+                    }
                   }
 
-
-                  setScore(score + 1); //increment score by 1
-
-                  if (score === 9) {
-                    setIsGameOver(true)
-                  }
-
-                  // setting new state with updated clicked cat card ids
-                  const copyOfClickedCardIds = structuredClone(clickedCardIds);
-                  copyOfClickedCardIds.push(cat.id);
-                  setClickedCardIds(copyOfClickedCardIds);
-
-                  if (score >= highScore) {
-                    //increment highscore by 1 if its new high score
-                    setHighScore(highScore + 1);
-                  }
-                  }
-                  
                 }}
               >
                 <img src={cat.url} alt="cat" className="cat-image" />
@@ -79,6 +79,8 @@ function Game({ catList }) {
           setIsGameOver(false);
           setScore(0);
           setClickedCardIds([]);
+          const clickSound = new Audio("/public/sound/clicksound.wav");
+          clickSound.play();
         }}>Again, Hooman?</button>
       </dialog>}
     </>
