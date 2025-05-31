@@ -35,6 +35,13 @@ function App() {
         Dont click the same cat twice or else game over!
       </p>
       <Game catList={catList} />
+      <a
+        href="https://www.flaticon.com/free-icons/paw"
+        title="paw icons"
+        className="attribution-link"
+      >
+        Paw icons created by LAFS - Flaticon
+      </a>
     </>
   );
 }
