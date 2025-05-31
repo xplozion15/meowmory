@@ -1,6 +1,6 @@
 ## Live link
 
-[Meowmory - A memory card game made with cat api](meowmory-xi.vercel.app)
+[Meowmory - A memory card game made with cat api](https://meowmory-xi.vercel.app/)
 
 ## What I learnt
 
