@@ -37,8 +37,8 @@
   align-items: center;
   cursor: pointer;
   box-shadow:
-    0 0 0 4px white,
-    8px 8px 0 0 white;
+    0 0 0 4px darkgray,
+    8px 8px 0 0 darkgray;
 }
 
 .cat-image {
@@ -97,7 +97,7 @@
 
   .game-rule {
     font-size: 0.7rem;
-    font-weight: 600;
+    font-weight: 800;
   }
 
   .score {
