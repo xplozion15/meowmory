@@ -31,7 +31,6 @@
 }
 
 .cat-card {
-  transition: 500ms;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -42,7 +41,7 @@
     8px 8px 0 0 darkgray;
 }
 
-.cat-card:hover {
+.cat-card:active {
   box-shadow:
     0 0 0 4px white,
     8px 8px 0 0 white;
